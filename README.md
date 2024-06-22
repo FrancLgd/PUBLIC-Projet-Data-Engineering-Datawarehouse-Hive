@@ -183,14 +183,6 @@ hive -f ./src/orders_department_count.hql --hiveconf order_id=10
     <img src="./docs/images/capture_orders_department_count.png" alt="alt text" style="width: 40%;">
 </div>
 
-#### 3.2 Tests d'optimisation
-
-CSV Time taken (Elapsed Time) vs ORC Time taken ORC (Elapsed Time) vs ORC avec Partion (Elapsed Time)
-
-best_category : 38sec (21) vs 32 (16) sec vs 82 (62)
-best_hour : 32sec (15) sec vs 26sec (8) 48 (29)
-orders_departement_count : 33sec (16)  vs 32sec (14) vs 46 (26) 
-
 ### 4. Définir la requête de la base d'apprentissage pour le Machine Learning
 
 Les Data Scientists vont devoir construire des modèles prédictifs afin d'optimiser la vente des articles. Pour cela, ils souhaitent disposer d'une requête SQL qui peuvent exécuter quand ils ont besoin de récupérer toutes les informations depuis Hive. Cette requête doit retourner une table de données où chaque ligne correspond à un article d'une commande, et disposer des informations suivantes :
