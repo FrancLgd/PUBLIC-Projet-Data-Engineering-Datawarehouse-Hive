@@ -25,5 +25,4 @@ JOIN
 JOIN
     freshness.orders ord ON ord.order_id = op.order_id
 JOIN
-    freshness.orders_per_users opu ON opu.user_id = ord.user_id
-LIMIT 10;
+    freshness.orders_per_users opu ON opu.user_id = ord.user_id;

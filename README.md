@@ -51,7 +51,7 @@ unzip hive-data-warehouse-dataset.zip
 Les fichiers csv alors obtenus dans le dossier `/home/admin/hive-dataset` sont listés dans la capture ci-dessous.
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_liste_csv.png" alt="alt text" style="width: 40%; height: 10%;">
+    <img src="./docs/images/capture_liste_csv.png" alt="alt text" style="width: 50%;">
 </div>
 
 #### 1.2 Importer les données dans Hive
@@ -95,7 +95,7 @@ CREATE TABLE freshness.aisles_products AS
 La figure qui suit permet de visualiser les premières lignes de cette table. Nous y observons que la catégorie avec le plus d'articles est la catégorie 'missing', autrement dit ce qui regroupe les articles non-catégorisés. La "vraie" catégorie la plus représentée est la 'candy chocolate', avec 1146 articles, suivie par 'ice cream' qui en dénombre 1043, etc.
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_aisles_products.png" alt="alt text" style="width: 40%; height: 10%;">
+    <img src="./docs/images/capture_aisles_products.png" alt="alt text" style="width: 70%;">
 </div>
 
 
@@ -122,7 +122,7 @@ CREATE TABLE freshness.departments_products AS
 La figure ci-dessous donne à voir les premières lignes de cette table `departments_products`. Nous y remarquons que les départements les plus représentés en termes d'articles sont respectivement 'personal care' (avec 6081 articles), 'snacks' (5859 articles), 'pantry' (5040), etc.
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_departments_products.png" alt="alt text" style="width: 17%; height: 10%;">
+    <img src="./docs/images/capture_departments_products.png" alt="alt text" style="width: 40%;">
 </div>
 
 Enfin, nous voulons une table `orders_per_users` dénombrant le nombre d'articles moyen par commande, et ce pour chaque utilisateur. Ceci est réalisé grâce à la requête qui suit. Elle prend environ 80 secondes à aboutir.
@@ -147,7 +147,7 @@ CREATE TABLE freshness.orders_per_users AS
 Sur la figure ci-dessous sont listés les utilisateurs dont le nombre moyen d'articles par commande sont les plus élevés.
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_orders_per_users.png" alt="alt text" style="width: 20%; height: 10%;">
+    <img src="./docs/images/capture_orders_per_users.png" alt="alt text" style="width: 40%;">
 </div>
 
 ### 3. Réaliser les requêtes pré-constuites
@@ -164,7 +164,7 @@ hive -f ./src/best_category.hql --hiveconf user_id=200
 ```
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_best_category.png" alt="alt text" style="width: 20%; height: 10%;">
+    <img src="./docs/images/capture_best_category.png" alt="alt text" style="width: 40%;">
 </div>
 
 ```bash
@@ -172,7 +172,7 @@ hive -f ./src/best_hour.hql --hiveconf product_name="'Honey Mustard'"
 ```
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_best_hour.png" alt="alt text" style="width: 20%; height: 10%;">
+    <img src="./docs/images/capture_best_hour.png" alt="alt text" style="width: 40%;">
 </div>
 
 ```bash
@@ -180,7 +180,7 @@ hive -f ./src/orders_department_count.hql --hiveconf order_id=10
 ```
 
 <div style="text-align:center;">
-    <img src="./docs/images/capture_orders_department_count.png" alt="alt text" style="width: 20%; height: 10%;">
+    <img src="./docs/images/capture_orders_department_count.png" alt="alt text" style="width: 40%;">
 </div>
 
 #### 3.2 Tests d'optimisation
